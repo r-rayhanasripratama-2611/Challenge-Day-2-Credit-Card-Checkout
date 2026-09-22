@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        font-family: "Open Sans", sans-serif;
+        background-color: #e8edf2;
+        height: 100vh;
+        align-items: center;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        height: 90%;
+        width: 25%;
+        border: white solid 5px;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 0px 10px rgba(0, 0, 0, 0.034);
+      }
+
+      /* start logo */
+      .logo {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        align-items: center;
+        flex: 1;
+        justify-content: center;
+        font-weight: bold;
+      }
+
+      .logo img {
+        height: 40px;
+      }
+      /* end logo */
+
+      /* start item price */
+      .item-price-container {
+        display: flex;
+        flex: 1;
+        background-color: white;
+        flex-wrap: wrap;
+        margin: 0%;
+        padding: 0%;
+        box-shadow: 0 0px 10px rgba(0, 0, 0, 0.034);
+      }
+
+      li {
+        list-style: none;
+        width: 50%;
+        box-sizing: border-box;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      .item-name {
+        text-align: start;
+        align-content: center;
+        padding-left: 20px;
+        border: rgba(0, 0, 0, 0.13) solid 0px;
+        border-top-width: 1px;
+        border-left-width: 1px;
+        color: rgb(0, 0, 99);
+      }
+
+      .price {
+        text-align: end;
+        align-content: center;
+        padding-right: 20px;
+        border: rgba(0, 0, 0, 0.13) solid 0px;
+        border-top-width: 1px;
+        border-right-width: 1px;
+        font-weight: bold;
+      }
+
+      .total {
+        text-align: end;
+        align-content: center;
+        padding-right: 20px;
+        width: 100%;
+        margin: 0%;
+        background-color: white;
+        border: rgba(0, 0, 0, 0.13) solid 0px;
+        border-width: 1px;
+        font-weight: bold;
+      }
+
+      .total > span {
+        color: rgb(0, 0, 99);
+        font-weight: normal;
+      }
+      /* end item price */
+
+      /* start payment logo */
+      .payment-logo {
+        background-color: white;
+        display: flex;
+      }
+
+      .plogo {
+        margin-top: 10px;
+        flex: 1;
+        text-align: center;
+      }
+
+      .visa > img {
+        margin-top: 10px;
+        height: 30px;
+      }
+
+      .mastercard > img {
+        margin-top: 10px;
+        height: 40px;
+      }
+
+      .paypal > img {
+        margin-top: 10px;
+        height: 40px;
+      }
+      /* end payment logo */
+
+      /* start receipient logo */
+      .receipient {
+        display: flex;
+        background-color: white;
+        flex-wrap: wrap;
+        padding-left: 40px;
+        padding-right: 40px;
+        flex-direction: column;
+        padding-bottom: 40px;
+      }
+
+      .data-container {
+        width: 100%;
+        border: rgba(0, 0, 0, 0.13) solid 0px;
+        border-bottom-width: 1px;
+      }
+
+      .exp-code {
+        display: flex;
+        gap: 20px;
+        flex: 1;
+        justify-content: space-between;
+        border-bottom: none;
+      }
+      .expired,
+      .code {
+        flex: 1;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+      }
+
+      .title-name {
+        font-size: 12px;
+        color: #879baf;
+      }
+
+      .pay-button {
+        text-align: center;
+        background-color: rgb(0, 0, 99);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="logo">
+        <div>
+          <img src="./assets/online-shopping.png" alt="online shopping" />
+        </div>
+        <div><h3>Summary</h3></div>
+      </section>
+
+      <!--  -->
+      <ul class="item-price-container">
+        <li class="item-name">Apple watch</li>
+        <li class="price">$200.00</li>
+        <li class="item-name">Canon EOS</li>
+        <li class="price">$300.00</li>
+        <li class="item-name">Apple iPad Pro</li>
+        <li class="price">$300.00</li>
+        <li class="total"><span>Total:</span> $1000.00</li>
+      </ul>
+
+      <!--  -->
+      <section class="payment-logo">
+        <div class="visa plogo">
+          <img src="./assets/Visa_Inc._logo_(2005–2014).svg" alt="visa" />
+        </div>
+        <div class="mastercard plogo">
+          <img src="./assets/Mastercard-logo.svg" alt="mastercard" />
+        </div>
+        <div class="paypal plogo">
+          <img src="./assets/PayPal_Logo_Icon_2014.svg" alt="paypal" />
+        </div>
+      </section>
+      <!--  -->
+      <section class="receipient">
+        <div class="receipient-name data-container">
+          <p class="title-name">Cardholder's Name</p>
+          <p class="name">Rayhan Asri pratama</p>
+        </div>
+        <div class="receipient-card data-container">
+          <p class="title-name">Card Number</p>
+          <p class="card-number">**** **** **** 1234</p>
+        </div>
+        <div class="exp-code data-container">
+          <div class="expired">
+            <p class="title-name">Exp Date</p>
+            <p class="exp-date">07/2048</p>
+          </div>
+          <div class="code">
+            <p class="title-name">CVC/CVV2</p>
+            <p class="secret-code">***</p>
+          </div>
+        </div>
+      </section>
+      <!--  -->
+      <section class="pay-button">
+        <h2>Pay Now</h2>
+      </section>
+    </main>
+  </body>
+</html>
